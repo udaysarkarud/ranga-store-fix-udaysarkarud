@@ -32,6 +32,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* border: 1px solid black; */
+  grid-gap: 20px;
   text-align: center;
   width: 100%;
   margin: auto;
@@ -45,7 +46,6 @@ body {
   padding: 10px;
   transition: 0.6s;
   min-height: 400px;
-
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;

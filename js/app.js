@@ -88,3 +88,5 @@ const updateTotal = () => {
 document.getElementById('buyNowBtn').addEventListener('click', () => {
   location.reload();
 })
+
+
