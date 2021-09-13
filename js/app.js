@@ -1,6 +1,6 @@
 const loadProducts = () => {
-  const url = `http://127.0.0.1:5500/ranga-api.json`;
-  //const url = `https://fakestoreapi.com/products`;
+  //const url = `http://127.0.0.1:5500/ranga-api.json`;
+  const url = `https://fakestoreapi.com/products`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => showProducts(data));
@@ -14,17 +14,22 @@ const showProducts = (products) => {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
+    div.innerHTML = `
+    <div class="single-product">
       <div>
-    <img class="product-image" src=${image}></img>
+        <img class="product-image" src=${image}></img>
       </div>
-      <h3>${product.title}</h3>
-      <h4>Avarage Rating: ${product?.rating?.rate} | Total Rated: ${product?.rating?.count}</h4>
-      <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price}</h2>
-      
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <div class="product-info">
+        <h3>${product.title}</h3>
+        <h4>Avarage Rating: ${product?.rating?.rate} | Total Rated: ${product?.rating?.count}</h4>
+        <h4>Category: ${product.category}</h4>
+        <h2>Price: $ ${product.price}</h2>
+
+        <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add
+          to cart</button>
+        <button id="details-btn" class="btn btn-danger">Details</button>
+      </div>
+    </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
