@@ -1,7 +1,6 @@
 // Api Connect
 const loadProducts = () => {
-  const url = `http://127.0.0.1:5500/ranga-api.json`;
-  //const url = `https://fakestoreapi.com/products`;
+  const url = `https://fakestoreapi.com/products`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => showProducts(data));
