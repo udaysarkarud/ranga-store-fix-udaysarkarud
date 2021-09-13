@@ -39,13 +39,19 @@
   <!-- Main Area Start -->
   <main class="main">
     <!-- Search Area Start -->
-    <section class="search-container">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn">
-          Search
-        </button>
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center search-box">
+          <form class="form-inline">
+            <div class="form-group">
+              <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Type Product Name"
+                autocomplete="off">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-lg">Search</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
     <!-- Search Area End -->

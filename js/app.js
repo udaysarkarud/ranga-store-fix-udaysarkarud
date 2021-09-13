@@ -1,10 +1,13 @@
+// Api Connect
 const loadProducts = () => {
-  //const url = `http://127.0.0.1:5500/ranga-api.json`;
-  const url = `https://fakestoreapi.com/products`;
+  const url = `http://127.0.0.1:5500/ranga-api.json`;
+  //const url = `https://fakestoreapi.com/products`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => showProducts(data));
 };
+
+// call api connect and showProducts function 
 loadProducts();
 
 // show all product in UI 
@@ -34,16 +37,18 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+
+// addToCart Function
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
-
   updateTaxAndCharge();
   updateTotal();
   document.getElementById("total-Products").innerText = count;
 };
 
+// convert to Float
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);
@@ -53,7 +58,6 @@ const getInputValue = (id) => {
 // main price update function
 const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
-
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
   document.getElementById(id).innerText = total.toFixed(2);
