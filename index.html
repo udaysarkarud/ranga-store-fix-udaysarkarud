@@ -18,18 +18,25 @@
 </head>
 
 <body>
+  <!-- header Area Start -->
   <header>
-    <!-- Nav Area Start -->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Amazon Store</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <!-- Nav Area End -->
 
+    <!-- Nav section Start -->
+    <section class="container-fluid">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Amazon Store</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- Nav section End -->
+
+  </header>
+  <!-- header Area End -->
+
+  <!-- Main Area Start -->
   <main class="main">
     <!-- Search Area Start -->
     <section class="search-container">
@@ -41,71 +48,75 @@
         </button>
       </div>
     </section>
-    <!--  onclick="loadProducts()" -->
     <!-- Search Area End -->
 
-    <div class="row products-area">
-      <!-- Show Products Start-->
-      <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
+    <!-- Product and Cart section Start -->
+    <section class="container-fluid">
+      <div class="row products-area">
+        <!-- Show Products Start-->
+        <div class="col-md-9 col-lg-9 col-sm-7">
+          <div id="all-products" class="">
 
-        </div>
-      </div>
-      <!-- Show Products End-->
-
-      <!-- My Cart Area Start-->
-      <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
-        <div class="cart" id="my-cart">
-          <table class="table">
-            <thead>
-              <h1>My-Cart</h1>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Total Added-Products:</th>
-                <td><span id="total-Products">0</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Price:</th>
-                <td>$ <span id="price">0</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Delivery-Charge:</th>
-                <td>$ <span id="delivery-charge">20</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Total-Tax:</th>
-                <td>$ <span id="total-tax">0</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Total</th>
-                <td colspan="2">$ <span id="total">0</span></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="parces text-center">
-            <button id="buyNowBtn" class="btn btn-primary text-center">Buy Now</button>
           </div>
         </div>
+        <!-- Show Products End-->
+
+        <!-- My Cart Area Start-->
+        <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
+          <div class="cart" id="my-cart">
+            <table class="table">
+              <thead>
+                <h1>My-Cart</h1>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Total Added-Products:</th>
+                  <td><span id="total-Products">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Price:</th>
+                  <td>$ <span id="price">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Delivery-Charge:</th>
+                  <td>$ <span id="delivery-charge">20</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Total-Tax:</th>
+                  <td>$ <span id="total-tax">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Total</th>
+                  <td colspan="2">$ <span id="total">0</span></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="parces text-center">
+              <button id="buyNowBtn" class="btn btn-primary text-center">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- My Cart Area End-->
       </div>
-      <!-- My Cart Area End-->
-    </div>
+    </section>
+    <!-- Product and Cart section Start -->
   </main>
+  <!-- Main Area End -->
   <footer></footer>
 
   <!-- add javascript  file  -->
